@@ -21,6 +21,19 @@ public class basic {
 			driver.findElement(By.id("username")).sendKeys(" rahulshettyacademy420");
 			driver.findElement(By.name("password")).sendKeys("xyz");
 			driver.findElement(By.className("btn-info")).click();
+//			locator
+			// id
+			// name
+			//classname
+			// xpath
+			// css
+			// link text
+					// partial link text
+					
+					// css  selector
+				//	class name -> tagname.classname
+				//	id-> tagname#id
+			//
 
 	}
 
