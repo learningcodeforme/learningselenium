@@ -44,17 +44,17 @@ public class basic {
 
 		// Phone number
 		// parent child traversing using xpath
+		
 		driver.findElement(By.xpath("//form/input[3]")).sendKeys("parent child xpath");
 
 		// click on reset button
 		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 
 		// grab the text messasge using parent child concept using css
+		
 		System.out.println(driver.findElement(By.cssSelector("form p")).getText());
 
 		// going back to login page using css
-
-
 		
 		driver.findElement(By.xpath("//div[@class='forgot-pwd-btn-conainer']/button[1]")).click();
 		
