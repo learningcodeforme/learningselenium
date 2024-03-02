@@ -6,6 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class basic {
 
+	/**
+	 * @param args
+	 * @throws InterruptedException
+	 */
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Hello world");
 
@@ -71,6 +75,11 @@ public class basic {
 		// using regular express in xpath click sign button
 		
 		driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
+		
+		Thread.sleep(5000);
+	
+		// using text() to find the locator(using text  appear ) 
+		driver.findElement(By.xpath("//button[text()='Log Out']")).click();
 		
 		Thread.sleep(5000);
 		
@@ -179,6 +188,14 @@ public class basic {
 		
 		// Regular expression in xpath
 		//Example -->    button[contains(@class,'submit')]  --> using contians key words 
+		
+		//search the locator with text using text()
+		
+		//text()
+		 // it is applicable only for xpath in css we cannot use text()
+		// //button[text()="Log Out"]
+		
+		
 		
 	}
 
