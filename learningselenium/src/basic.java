@@ -25,14 +25,13 @@ public class basic {
 		// locator learning
 		
 		driver.findElement(By.id("inputUsername")).sendKeys(" rahulshettyacademy420");
-		// driver.findElement(By.name("password")).sendKeys("xyz");
 		driver.findElement(By.cssSelector("input[type='password']")).sendKeys("1233434343535345");
 		driver.findElement(By.className("signInBtn")).click();
-		Thread.sleep(5000);
-		//driver.findElement(By.cssSelector("div.alert"));
 		System.out.println("Alert text -- > "+ driver.findElement(By.cssSelector("p.error")).getText());
-		 driver.quit();
-
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("amazing");
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("amazing");
+		driver.findElement(By.xpath("//input[@placeholder='Phone Number']")).sendKeys("12131313313");
 		// selenium support following locator
 		// id
 		// name
@@ -76,6 +75,34 @@ public class basic {
 		 // example - > $('css of locator')
 		 //$('p.error')
 		 //
+		 
+		 // Link Text 
+		 // a - > anchor tag
+		 //1. driver.findElement(By.linkText("text of link that appear"))
+		 
+		 // xpath
+		 // //tagname[@attibute='value']
+		
+		//css
+		 //  tagname[attribute="value"]
+		
+		// we can verify the xpath using developer tool console using $x('xpath')
+		 //$x('//input[@placeholder="Phone Number"]')
+		
+		
+		// index in xpath and css 
+		
+		//xpath using index in form of array
+		//driver.findElement(By.xpath("//input[@type='Text']"))[1]
+		
+	//	in css it uses :nth-child(3)
+		//driver.findElement(By.css("input[type='Text']")):nth-child(3) 
+		
+		
+		 
+		 
+		 
+		 
 
 	}
 
