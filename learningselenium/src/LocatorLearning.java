@@ -37,5 +37,21 @@ public class LocatorLearning {
 	  // need to understand how to go in lesson 47
 	  //date march 2
 	  
+	  //date march 3 
+	//header/div/button[1]/parent::div/parent::header/a
+	  
+	/*
+	 * //header/div/button[1]/parent::div/parent::header/a[2]
+	 * 
+	 * first we traverse from "header" -> then it child "div" -> then it child "button[1] 
+	 *   /parent:: -- going to to parent of button[1] that is "div" 
+	 *   /parent:: -- going to it parent of "div" that is "header" 
+	 *   then go it child using /a[2]
+	 *   
+	 *   Note CSS we cannot traverse from child to parent  -- 
+	 *  
+	 */
+	  System.out.println("travering from child to grandparent and the get grandparent child text  -> "+driver.findElement(By.xpath("//header/div/button[1]/parent::div/parent::header/a[2]")).getText());
+	   
   }
 }
