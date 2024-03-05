@@ -3,3 +3,14 @@ study about parent - child relationship
 
 Date march 4 24 
 Handling checkbox -lesson 60
+ Nitesh - remark - not able to study 
+ 
+ Date March 5 2024
+ 
+ Handling checkbox -lesson 60 -completed 
+ 
+ when there is space between classname and when we use css selector we can replace space with dot
+ 
+ 
+ Date - 6/3/2024
+Assignment 2: UI(Dropdowns,EditBoxes,Error Valdiation) Assignment

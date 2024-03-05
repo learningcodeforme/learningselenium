@@ -19,22 +19,40 @@ public class updatedDropdow {
 		System.out.println("Number of the checkboxes - "+driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 		
 		
-	
-		driver.findElement(By.id("divpaxinfo")).click();
-		Thread.sleep(3000);
+		driver.findElement(By.cssSelector("input[value='RoundTrip']")).click();
 		
-		System.out.println("Before selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
-		int i=1;
-		while(i<5) {
-		driver.findElement(By.id("hrefIncAdt")).click();
-		i++;
+		//driver.findElement(By.cssSelector("input[value='OneWay']")).click();
+		
+		if(driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Round Trip is selected");
+			
+		}
+		else
+		{
+			Assert.assertFalse(false);
+			System.out.println("One way Trip is selected");
 		}
 		
-		driver.findElement(By.id("btnclosepaxoption")).click();
 		
-		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
 		
-	driver.quit();
+	
+//		driver.findElement(By.id("divpaxinfo")).click();
+//		Thread.sleep(3000);
+//		
+//		System.out.println("Before selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
+//		int i=1;
+//		while(i<5) {
+//		driver.findElement(By.id("hrefIncAdt")).click();
+//		i++;
+//		}
+//		
+//		driver.findElement(By.id("btnclosepaxoption")).click();
+//		
+//		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
+//		
+//	driver.quit();
 	}
 	
 
