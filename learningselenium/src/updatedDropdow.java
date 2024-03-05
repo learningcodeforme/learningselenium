@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class updatedDropdow {
 
@@ -10,7 +11,15 @@ public class updatedDropdow {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		System.out.println("Senior Citizen Checkbox is checked -"+driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		Assert.assertFalse(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).click();
+		System.out.println("Senior Citizen Checkbox is checked -"+driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+		System.out.println("Number of the checkboxes - "+driver.findElements(By.cssSelector("input[type='checkbox']")).size());
 		
+		
+	
 		driver.findElement(By.id("divpaxinfo")).click();
 		Thread.sleep(3000);
 		
@@ -25,7 +34,10 @@ public class updatedDropdow {
 		
 		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
 		
+	driver.quit();
 	}
+	
+
 
 }
 
