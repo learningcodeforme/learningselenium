@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+
 
 public class Assignment2 {
 
@@ -18,8 +18,8 @@ public class Assignment2 {
 		driver.findElement(By.cssSelector("#exampleFormControlSelect1")).click();
 		driver.findElement(By.xpath("//*[contains(text(),'Female')]")).click();
 		driver.findElement(By.xpath("//label[@for='inlineRadio2']")).click();
-		driver.findElement(By.xpath("//input[@name='bday']")).click();
-		driver.findElement(By.cssSelector("input[value='Submit")).click();
+		driver.findElement(By.cssSelector("input[type='date")).sendKeys("03-03-2024");
+     	driver.findElement(By.cssSelector("input[value='Submit")).click();
 		String msg = driver.findElement(By.cssSelector(".alert.alert-success.alert-dismissible")).getText();
 		System.out.println(" Message on page- " + msg);
 		driver.quit();
