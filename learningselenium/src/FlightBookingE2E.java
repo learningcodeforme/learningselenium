@@ -17,17 +17,19 @@ public class FlightBookingE2E {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
 		Thread.sleep(3000);
-	//	driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
-//		String value=driver.findElement(By.xpath("//div[@id='Div']")).getAttribute("style");
-//		if(value.contains("0.5")) {
-//			System.out.println("Return Date is disabled");
-//			Assert.assertTrue(true);			
-//		}
-//		else
-//		{
-//			System.out.println("Return Date is not disable");
-//			Assert.assertTrue(false);
-//		}
+		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
+		if(driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
+		{
+			Assert.assertTrue(true);
+			System.out.println("Returm Date is disabled");
+			
+		}
+		else
+		{
+			Assert.assertFalse(false);
+			System.out.println("Returm Date is enabled");
+		}
+	
 		
 		driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).click();
 		driver.findElement(By.id("divpaxinfo")).click();
@@ -43,6 +45,11 @@ public class FlightBookingE2E {
 		
 		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
 
+		
+		driver.findElement(By.id("ctl00_mainContent_btn_FindFlights")).click();
+		
+		System.out.println("End to End testing is completed");
+		driver.quit();
 	}
 
 }
