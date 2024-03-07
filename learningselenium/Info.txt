@@ -19,9 +19,8 @@ Assignment 2: UI(Dropdowns,EditBoxes,Error Valdiation) Assignment
 Date 7/3/2024- E2E Testing Fligh booking  -lesson 66 
 done
 
+Date 8/3/2024 -> need to learn
+70. Code formatting and Debugging
 
-Date 8/3/2024
-static drop down need to fix
-handle alert - 68
 
  
