@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class FlightBookingE2E {
@@ -43,9 +45,14 @@ public class FlightBookingE2E {
 		
 		driver.findElement(By.id("btnclosepaxoption")).click();
 		
-		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
-
 		
+		System.out.println("After  selection number of Adult passangers --> "+driver.findElement(By.id("divpaxinfo")).getText());
+        
+		WebElement item=driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
+		Select dropdown =new Select(item);
+		dropdown.selectByVisibleText("USD");
+		
+
 		driver.findElement(By.id("ctl00_mainContent_btn_FindFlights")).click();
 		
 		System.out.println("End to End testing is completed");
