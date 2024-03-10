@@ -25,7 +25,10 @@ date march 8 and not study -- due to lazyness
 Date 10/3/2024 -> need to learn
 70. Code formatting and Debugging
 
+Study till  lesson 70 to 82
 
-camelcae 
+
+date 10
+Assignment 3: Synchronization with Explicit wait - Assignment
 
  
