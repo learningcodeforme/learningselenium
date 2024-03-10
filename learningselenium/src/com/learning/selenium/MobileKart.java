@@ -20,9 +20,6 @@ public class MobileKart {
 		
 		signIn(driver);
 		
-		
-		
-
 	}
 	
 	public static void signIn(WebDriver driver) {
