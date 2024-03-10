@@ -29,8 +29,7 @@ interface IComparable interface IEnumerable
  
  
 Methods: Names should be in mixed case. Use verbs to describe what the method does:
-
- void calculateTax() string getSurname() 
+void calculateTax() string getSurname() 
  
  
 Variables: Names should be in mixed case. The names should represent what the value of the variable represents:
