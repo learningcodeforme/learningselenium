@@ -38,6 +38,23 @@ explict wait-> it define local level and it apply on particular element
 		  WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		  w.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".promoCode")));
 		
+	
+	date 14/3/24
+		
+		WebDriverWait() vs fluent wait()
+		
+		Date 21/4/2024
+		
+	There is another explicit wait mechanism is called fluent wait 
+	
+	explict wait can achive via two ways 
+	webdriver wait =10 Sec 
+	fluent wait  10 sec , Polling in 2 sec 
+	it look for elelment in every 2 seconds for 10 second if not found it again process and agian 
+		
+
+in fluent wait we need to define our own custom method to look for particular element  and apply wai
+		
 		
 	
 		
