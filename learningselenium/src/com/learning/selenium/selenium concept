@@ -53,7 +53,23 @@ explict wait-> it define local level and it apply on particular element
 	it look for elelment in every 2 seconds for 10 second if not found it again process and agian 
 		
 
-in fluent wait we need to define our own custom method to look for particular element  and apply wai
+in fluent wait we need to define our own custom method to look for particular element  and apply wait on that and decide acction on that
+
+
+Action and frames 
+
+
+Action Class -- to handle mouse hover and keyboard action 
+it provide specific method 
+
+
+//we need to create action object and pass driver as arrgument to apply action class method on driver instance
+// we need to add .build().perform() to perform action in action class method
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList-nav-line-1"))).build().perform();
+
+		
+		
 		
 		
 	
